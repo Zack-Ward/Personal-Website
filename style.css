@@ -3,59 +3,62 @@
 /*----------------------------------------------------------------------------------------------------------------*/
 
 :root{
-  --primary-color--: #001111d7;
+  --primary-color--: #001d44d7;
   --primary-color-transparent--: #00111158;
-  --secondary-color--:#00586adb;
-  --tertiary-color--:#decf5de3;
-  --tertiary-color-transparent--:#decf5d55;
+  --secondary-color--:#00326adb;
+  --tertiary-color--: #a75600;
+  --tertiary-color-transparent--:#a756007d;
 
   --primary-font-color--:#ffffff;
-  --secondary-font-color--:#00586adb;
-  --tertiary-font-color--:#decf5de3;
+  --secondary-font-color--: #a75600;
 
   --primary-hover-color--:#018f7a;
   
   --primary-font--: "Poiret One", sans-serif;
   --secondary-font--:"Fira Sans", sans-serif;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 
 body{
-    background-color: var(--primary-color--);
+    padding:0;
+    margin:0;
+    background: linear-gradient(#02205b,#000000);
 }
 
-/* NAVIGATION BAR */
-nav{
-    display: flex;
-    justify-content: center;
-    font-family: var(--primary-font--);
-    background-color: var(--primary-color-transparent--);
-    width:fit-content;
-    text-align: center;
-    margin:2vw auto;
-    border-radius:5vw;
-    
-    a{
-        padding: 2vw;
-        text-decoration: none;
-        color: var(--primary-font-color--);
-        font-size: 2vw;
-        &:hover{
-            color: var(--tertiary-font-color--);
-        }
-    }
+.main-background-image{
+    margin:0;
+    padding:0;
+    width: 100%;
+    height: 100%;
+    z-index:-1;
 }
+
 
 /* TEXT & HEADINGS */
 h1{
     color: var(--primary-font-color--);
     font-family: var(--primary-font--);
-    font-size: 6vw;
+    font-size: 4vw;
+}
+
+h2{
+    color: var(--secondary-font-color--);
+    font-size: 2vw;
+    font-family: var(--primary-font--);
+}
+
+p{
+    color: var(--primary-font-color--);
+    font-family: var(--primary-font--);
+    font-size: 2vw;
 }
 
 .slogan{
     font-family: var(--primary-font--);
     color: var(--primary-font-color--);
+    font-size: 6vw;
     animation: fadeup 5s;
 }
 
@@ -63,28 +66,106 @@ h1{
 /*--------------------------------------------   SECTIONS  ----------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------*/
 
-/* PROFILE SECTION */
-.profile-section{
-    display: flex;
+/* HERO SECTION */
+.hero-section{
+    margin:0;
+    display: block;
     justify-content: center;
+    text-align: center;
+}
+.logo{
+    position: absolute;
+    top:5vw;
+    left:5vw;
+    height: 30vw;
+    animation: fadeup 2s;
+}
+
+.hero-message{
+    padding:1vw;
+    border: solid 0.5vw #a75600;
+}
+.cta-buttons{
+    position: absolute;
+    display: block;
+    z-index: 0;
+    margin:125% 2% 0% 57%;
+    animation: fadeup 5s;
+}
+.cta-button{
+    a{
+        text-decoration: none;
+        color: var(--primary-font-color--);
+    }
+    padding:4vw;
+    margin:1vw;
+    font-family: var(--primary-font--);
+    font-size: 2vw;
+    border-radius: 1vw;
+    border:none;
+    padding:1vw;
+    background-color: var(--primary-color--);
+    color: var(--primary-font-color--);
+    &:hover{
+        background-color: var(--tertiary-color--);
+
+    }
+}
+.cta-button2{
+    a{
+        text-decoration: none;
+        color: var(--primary-font-color--);
+    }
+    padding:4vw;
+    
+    font-family: var(--primary-font--);
+    font-size: 2vw;
+    border-radius: 1vw;
+    border:none;
+    padding:1vw;
+    background-color: var(--tertiary-color--);
+    color: var(--primary-font-color--);
+    &:hover{
+        background-color: var(--primary-color--);
+
+    }
+}
+
+.hero-content-box{
+    position: absolute;
+    margin:80% 2% 0% 50%;
+}
+
+.hero-message-box{
+    font-family: var(--primary-font--);
+    color: var(--primary-font-color--);
+    animation: fadeup 5s;
+    z-index: 0;
+    padding:1vw;
+    background-color: var(--primary-color--);
+}
+
+
+/* ABOUT SECTION */
+section{
+    display: flex;
     text-align: center;
     margin:5vw;
 }
 
+.about-text{
+    text-align: left;
+    padding-right:2vw;
+    animation: fadeup 2s;
+}
 .profile-photo{
-    height:50%;
-    width: 20vw;
+    margin:5vw;
+    height:100%;
+    width: 30vw;
     filter: drop-shadow(0 0 0.75rem var(--primary-color--));
     animation: fadeup 2s;
-    
 }
-/* ABOUT SECTION */
-.about-section{
-    display:flex;
-    margin:2vw;
-    background-color: var(--primary-color-transparent--);
-    border-radius:5vw;
-}
+
 .image-left{
     padding:4vw 4vw;
     display: flex;
@@ -93,6 +174,49 @@ h1{
     border-radius:9vw;
 }
 /* SERVICES SECTION */
+
+.service-cards{
+    margin-top: 5vw;
+    display: grid;
+    grid-gap:0 3vw;
+    grid-template-columns: repeat(auto-fill, minmax(10%, 1fr));
+    
+}
+
+/* Source:https://stackoverflow.com/questions/2027657/overlapping-elements-in-css */
+.service-card{
+    justify-content: center;
+    position: relative;
+    width:20vw;
+    height: 20vw;
+    align-items: center;
+    h1{
+        font-size: 2vw;
+        text-align: center;
+    }
+    
+    .coin{
+        position:absolute;
+        height:100%;
+        z-index: 1;
+        &:hover{
+            animation: flip 2s;
+            .coin-backside{
+                visibility: visible;
+            }
+        }
+    }
+    .coin-backside{
+        visibility: hidden;
+        position:absolute;
+        height:100%;
+        width:fit-content;
+        z-index: 0;
+        &:hover{
+            animation: flip-over 2s;
+        }
+    }
+}
 
 
 /*----------------------------------------------------------------------------------------------------------------*/
@@ -118,4 +242,38 @@ h1{
   to {
     opacity:1;
   }
+}
+
+@keyframes flip {
+  0% {
+    transform: scale(0.9,1);
+  }
+
+  100% {
+    transform: scale(0,1);
+    opacity: 0;
+  }
+
+}
+
+@keyframes flip-over {
+  0% {
+    transform: scale(0,1);
+    visibility: visible;
+  }
+
+  100% {
+    transform: scale(1,1);
+  }
+
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+
 }
