@@ -1,0 +1,121 @@
+/*----------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------   ROOT STYLES  ----------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------*/
+
+:root{
+  --primary-color--: #001111d7;
+  --primary-color-transparent--: #00111158;
+  --secondary-color--:#00586adb;
+  --tertiary-color--:#decf5de3;
+  --tertiary-color-transparent--:#decf5d55;
+
+  --primary-font-color--:#ffffff;
+  --secondary-font-color--:#00586adb;
+  --tertiary-font-color--:#decf5de3;
+
+  --primary-hover-color--:#018f7a;
+  
+  --primary-font--: "Poiret One", sans-serif;
+  --secondary-font--:"Fira Sans", sans-serif;
+}
+
+
+body{
+    background-color: var(--primary-color--);
+}
+
+/* NAVIGATION BAR */
+nav{
+    display: flex;
+    justify-content: center;
+    font-family: var(--primary-font--);
+    background-color: var(--primary-color-transparent--);
+    width:fit-content;
+    text-align: center;
+    margin:2vw auto;
+    border-radius:5vw;
+    
+    a{
+        padding: 2vw;
+        text-decoration: none;
+        color: var(--primary-font-color--);
+        font-size: 2vw;
+        &:hover{
+            color: var(--tertiary-font-color--);
+        }
+    }
+}
+
+/* TEXT & HEADINGS */
+h1{
+    color: var(--primary-font-color--);
+    font-family: var(--primary-font--);
+    font-size: 6vw;
+}
+
+.slogan{
+    font-family: var(--primary-font--);
+    color: var(--primary-font-color--);
+    animation: fadeup 5s;
+}
+
+/*----------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------   SECTIONS  ----------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------*/
+
+/* PROFILE SECTION */
+.profile-section{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin:5vw;
+}
+
+.profile-photo{
+    height:50%;
+    width: 20vw;
+    filter: drop-shadow(0 0 0.75rem var(--primary-color--));
+    animation: fadeup 2s;
+    
+}
+/* ABOUT SECTION */
+.about-section{
+    display:flex;
+    margin:2vw;
+    background-color: var(--primary-color-transparent--);
+    border-radius:5vw;
+}
+.image-left{
+    padding:4vw 4vw;
+    display: flex;
+    height:50%;
+    width: 20%;
+    border-radius:9vw;
+}
+/* SERVICES SECTION */
+
+
+/*----------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------   ANIMATIONS / TRANSITIONS  ----------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------*/
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px var(--tertiary-color--), 0 0 20px var(--tertiary-color--), 0 0 30px var(--tertiary-color--), 0 0 40px var(--tertiary-color--), 0 0 50px var(--tertiary-color--), 0 0 3vw var(--tertiary-color--), 0 0 4vw var(--tertiary-color--);
+    filter: drop-shadow(0 0 0rem var(--tertiary-color--));
+  }
+  
+  to {
+    text-shadow: 0 0 20px var(--primary-color--), 0 0 30px var(--primary-color--) 0 0 40px var(--primary-color--) 0 0 50px var(--primary-color--) 0 0 60px var(--primary-color--) 0 0 70px var(--primary-color--) 0 0 80px var(--primary-color--);
+    filter: drop-shadow(0 0 5rem var(--primary-color--));
+  }
+}
+
+@keyframes fadeup {
+  from {
+    transform: translateY(100%); 
+    opacity: 0;
+  }
+  to {
+    opacity:1;
+  }
+}
