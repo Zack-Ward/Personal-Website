@@ -246,19 +246,20 @@ section{
   visibility: hidden;
   position: absolute;
   justify-content: center;
-  margin:300% 25%;
+  margin:350% 25%;
   width: 50vw;
-  height: 60vw;
+  height: 35vw;
   text-align: center;
-  border-radius:2vw;
+  border-radius:5vw;
   color: var(--primary-color--);
   background-color: var(--primary-color--);
   z-index: 2;
   animation: slide-up 4s;
+
   h1{
     font-family: var(--primary-font--);
     color: var(--primary-font-color--);
-    font-size: 5vw;
+    font-size: 2vw;
   }
 
   textarea,input{
@@ -266,11 +267,12 @@ section{
     background-color: var(--primary-color--);
     border-radius:2vw;
     font-family: var(--primary-font--);
-    width:40vw
+    width:40vw;
+    height: 2vw;
   }
   button{
     font-family: var(--primary-font--);
-    font-size:3vw;
+    font-size:2vw;
     color: var(--primary-font-color--);
     background-color: var(--primary-color--);
     border-radius:5vw;
@@ -306,7 +308,9 @@ section{
   body{
     max-width: 3840px;
   }
-
+    .cta-button2{ 
+        margin:2vw;
+    }  
 }
 
 /*-----------------------------------*/
@@ -420,42 +424,18 @@ section{
     }
     /* CONTACT SECTION */
     .popup-contact-form{
-        visibility: hidden;
-        position: absolute;
-        justify-content: center;
-        margin:1000% 8.9%;
+        margin:1100% 8.9%;
         width: 80vw;
         height: 80vw;
-        text-align: center;
-        border-radius:2vw;
-        color: var(--primary-color--);
-        background-color: var(--primary-color--);
-        z-index: 2;
-        animation: slide-up 4s;
     h1{
-        font-family: var(--primary-font--);
-        color: var(--primary-font-color--);
         font-size: 5vw;
     }
 
     textarea,input{
-        color: var(--primary-font-color--);
-        background-color: var(--primary-color--);
-        border-radius:2vw;
-        font-family: var(--primary-font--);
         width:40vw
     }
     button{
-        font-family: var(--primary-font--);
         font-size:3vw;
-        color: var(--primary-font-color--);
-        background-color: var(--primary-color--);
-        border-radius:5vw;
-        margin-top:2vw;
-        &:hover{
-            color: var(--primary-font-color--);
-            background-color: var(--tertiary-color--);
-        }
     }
     }
 }
