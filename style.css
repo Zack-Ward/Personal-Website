@@ -85,6 +85,7 @@ p{
     padding:1vw;
     border: solid 0.5vw #a75600;
 }
+
 .cta-buttons{
     position: absolute;
     display: block;
@@ -92,6 +93,7 @@ p{
     margin:125% 2% 0% 57%;
     animation: fadeup 5s;
 }
+
 .cta-button{
     a{
         text-decoration: none;
@@ -111,6 +113,7 @@ p{
 
     }
 }
+
 .cta-button2{
     a{
         text-decoration: none;
@@ -127,7 +130,6 @@ p{
     color: var(--primary-font-color--);
     &:hover{
         background-color: var(--primary-color--);
-
     }
 }
 
@@ -145,7 +147,6 @@ p{
     background-color: var(--primary-color--);
 }
 
-
 /* ABOUT SECTION */
 section{
     display: flex;
@@ -158,10 +159,12 @@ section{
     padding-right:2vw;
     animation: fadeup 2s;
 }
+
 .text{
     text-align: left;
     animation: fadeup 2s;
 }
+
 .profile-photo{
     margin:5vw;
     height:100%;
@@ -177,8 +180,8 @@ section{
     width: 20%;
     border-radius:9vw;
 }
-/* SERVICES SECTION */
 
+/* SERVICES SECTION */
 .service-cards{
     margin: 5vw auto;
     padding:0;
@@ -208,23 +211,158 @@ section{
             transform: rotateY(-0deg);
         }
     }
+
     .coin-front{
         position:absolute;
         backface-visibility: hidden;
         height:100%;
         z-index: 1;
     }
+
     .coin-back{
         position:absolute;
         height:100%;
         z-index: 0;
         transform:rotateY(180deg);
         backface-visibility: hidden;
-
     }
 }
 
+/*----------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------   SCREEN SIZES  ---------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------*/
 
+
+/*-----------------------------------*/
+/*----- 7680 X 4320 (8K Displays) ---*/
+/*-----------------------------------*/
+
+@media screen and (max-width: 7680px) {
+  body{
+    max-width: 7680px;
+  }
+}
+
+/*-----------------------------------*/
+/*--- 3840 X 2160 (4K Displays) -----*/
+/*-----------------------------------*/
+
+@media screen and (max-width: 3840px) {
+  body{
+    max-width: 3840px;
+  }
+
+}
+
+/*-----------------------------------*/
+/*-- 2560 X 1440 (2K/QHD Displays) --*/
+/*-----------------------------------*/
+
+@media screen and (max-width: 2560px) {
+  body,html{
+    max-width: 2560px;
+  }
+
+}
+
+/*-----------------------------------*/
+/*- 1920 X 1080 (Full HD Displays) --*/
+/*-----------------------------------*/
+
+@media screen and (max-width: 1920px) {
+  body,html{
+    max-width: 1920px;
+  }
+}
+
+
+/*-----------------------------------*/
+/*----- 1280 X 720 (HD Displays) ----*/
+/*-----------------------------------*/
+
+@media screen and (max-width: 1280px) {
+  body,html{
+    max-width: 1280px;
+  }
+}
+
+
+/*-----------------------------------*/
+/*----- 640 X 480 (SD Displays) -----*/
+/*-----------------------------------*/
+
+@media screen and (max-width: 640px) {
+  body,html{
+    max-width: 640px;
+  }
+}
+
+/*------------------------------------*/
+/*----------- Phone Displays ---------*/
+/*------------------------------------*/
+
+@media screen and (max-width: 600px) {
+
+  body,html{
+    max-width: 600px;
+  }
+  .divider{
+    width:100%;
+  }
+
+  /* TEXT & HEADINGS */
+    h1{
+        font-size: 8vw;
+    }
+
+    h2{
+        font-size: 4vw;
+    }
+
+    p{
+        font-size: 5vw;
+    }
+
+    .slogan{
+        font-size: 8vw;
+       
+    }
+    .cta-buttons{
+        margin:139% 10% 0% 57%;
+    }
+    .cta-button,.cta-button2{
+        font-size: 4.27vw;
+    }
+    .cta-button2{
+        align-self: center;
+    }
+    .about-section{
+        display:block;
+    }
+    .profile-photo{
+        height:80vw;
+        width:80vw;
+        display:block;
+        margin: 0vw auto;
+    }
+    .service-cards{
+        grid-template-columns: repeat(auto-fill, minmax(100%, 0.4fr));
+        
+    }
+    .service-card{
+        width: 80vw;
+        height: 80vw;
+        margin:5vw 2vw;
+
+        justify-content: center;
+        text-align: left;
+    }
+    .coin-front,.coin-back{
+        width: 80vw;
+        padding: 0;
+        margin:0;
+  
+}
 /*----------------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------   ANIMATIONS / TRANSITIONS  ----------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------*/
