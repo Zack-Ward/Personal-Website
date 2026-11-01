@@ -1,3 +1,11 @@
+const popup = document.getElementById("popup");
+function show(){ 
+    popup.style.visibility = "visible";
+}
+function remove(){ 
+    popup.style.visibility = "hidden";
+}
+
 // CONTACT FORM SUBMISSION
 const form = document.getElementById('form');
 const submitBtn = form.querySelector('button[type="submit"]');
