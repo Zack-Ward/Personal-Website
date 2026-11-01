@@ -475,6 +475,16 @@ section{
 
 }
 
+@keyframes fadeup {
+  from {
+    transform: translateY(100%); 
+    opacity: 0;
+  }
+  to {
+    opacity:1;
+  }
+}
+
 @keyframes slide-up {
   from {
     opacity: 0;
