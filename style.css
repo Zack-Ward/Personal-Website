@@ -34,7 +34,9 @@ body{
     height: 100%;
     z-index:-1;
 }
-
+.divider{
+    width:100%;
+}
 
 /* TEXT & HEADINGS */
 h1{
@@ -166,8 +168,8 @@ section{
 }
 
 .profile-photo{
-    margin:5vw;
-    height:100%;
+    margin:0vw 5vw;
+    height:fit-content;
     width: 30vw;
     filter: drop-shadow(0 0 0.75rem var(--primary-color--));
     animation: fadeup 2s;
@@ -227,6 +229,15 @@ section{
         backface-visibility: hidden;
     }
 }
+
+/* CONTACT SECTION
+form{
+    position: absolute;
+    margin:12vw;
+    width:100%;
+    z-index: 1;
+
+} */
 
 /*----------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------   SCREEN SIZES  ---------------------------------------------------*/
