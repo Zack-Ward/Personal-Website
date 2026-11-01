@@ -229,6 +229,17 @@ section{
         backface-visibility: hidden;
     }
 }
+/* CALL TO ACTION SECTION */
+
+.cta-text{
+    text-align: center;
+    padding-right:2vw;
+    animation: fadeup 2s;
+    background-color: var(--primary-color--);
+    border-radius: 5vw;
+    padding: 4vw;
+    
+}
 
 /* CONTACT SECTION
 form{
