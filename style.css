@@ -302,7 +302,7 @@ section{
   visibility: hidden;
   position: absolute;
   justify-content: center;
-  margin:350% 25%;
+  margin:418% 25%;
   width: 50vw;
   height: 35vw;
   text-align: center;
@@ -532,7 +532,7 @@ section{
     }
     /* CONTACT SECTION */
     .popup-contact-form{
-        margin:1100% 8.9%;
+        margin:1370% 8.9%;
         width: 80vw;
         height: 80vw;
     h1{
