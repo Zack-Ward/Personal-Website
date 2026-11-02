@@ -4,15 +4,15 @@
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
         <!-- Meta-Tag for the page title -->
-        <title>Isaac Ward Financial</title>
+        <title>Isaac Ward - Financial Servies</title>
 
         <!-- META  -->
         <meta charset='UTF-8'>
-        <meta name="description" content="Isaac Ward's professional portfolio.">
+        <meta name="description" content="Isaac Ward offers one-on-one financial services to make sure your money goes the extra mile.">
         <meta name="google-site-verification" content="{Google verification code for indexing & Google Analytics}" />
         <meta name="robots" content="index, follow">
         <meta name="author" content="Streight Digital Solutions">
-        <meta property="og:description" content="Isaac Ward's professional portfolio."/>
+        <meta property="og:description" content="Isaac Ward offers one-on-one financial services to make sure your money goes the extra mile."/>
         <meta property="og:url" content="https://whatsapp.com"/>
         <meta property="og:image" href="images/logo.svg"/>
         <meta http-equiv="cache-control" content="no-cache">
@@ -26,16 +26,13 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 
-        <!-- MICROSOFT CLARITY -->
-        <script type="text/javascript">
-        </script>
-
     </head>
 
     <!-- GOOGLE ANALYTICS -->
     <script async src="{Your Google Analytics Tag}"></script>
     <body>
         <div class="popup-contact-form" id="popup">
+            <button class="close-button" onclick="remove();">X</button>
             <form action="https://api.web3forms.com/submit" method="POST">
                 <input type="hidden" name="access_key" value="">
                 <h1 class="form-headings">Name</h1>
@@ -45,12 +42,18 @@
                 <h1 class="form-headings">How can I help?</h1>
                 <textarea class="message" name="message" required></textarea>
                 <br>
-                <button class="submit-button" type="submit">Send</button>
+                <button class="submit-button" type="submit">Submit</button>
                 <div class="h-captcha" data-captcha="true" data-theme="dark"></div>
             </form>
         </div>
             <section class="hero-section">
-                <img class="logo" src="images/logo.svg"></img>
+                <div class="branding">
+                    <img class="logo" src="images/logo.svg"></img>
+                    <div class="heading">
+                        <h1>Isaac Ward</h1>
+                        <h2>Financial Services Advisor</h2>
+                    </div>
+                </div>
                 <div class="hero-content">
                     <div class="hero-content-box">
                         <div class="hero-message-box">
@@ -80,6 +83,42 @@
             </section>
             <img class="divider" src="images/checker.svg"></img>
             <section class="about-section">
+                <div class="about-text" id="about">
+                    <h2>SELF-EMPLOYMENT</h2>
+                    <h1>No employer benefits?</h1>
+                    <p> I help contractors, tradespeople and business owners build their own safety net.</p>
+                </div>
+            </section>
+            <img class="divider" src="images/checker.svg"></img>
+                <div class="process-section" id="about">
+                    <h2>TRUST THE PROCESS</h2>
+                    <div class="process-grid">
+                        <div class="process-card">
+                            <img class="step" src="images/1.svg"><img>
+                            <h1>Assess</h1>
+                            <p>A relaxed conversation about your income, family, debts and goals.</p>
+                        </div>
+                        
+                        <div class="process-card">
+                            <img class="step" src="images/2.svg"><img>
+                            <h1>Plan</h1>
+                            <p>I compare options across carriers and show you what fits and why.</p>
+                        </div>
+                        <div class="process-card">
+                            <img class="step" src="images/3.svg"><img>
+                            <h1>Pace</h1>
+                            <p>We set coverage and contributions you can sustain, not stretch to hit.</p>
+                        </div>
+                        <div class="process-card">
+                            <img class="step" src="images/4.svg"><img>
+                            <h1>Finish</h1>
+                            <p>Yearly check-ins keep your plan on track as life changes.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <img class="divider" src="images/checker.svg"></img>
+            <section class="about-section">
                 <div class="text">
                     <h2>SERVICES</h2>
                     <h1>Helping families go the distance with their money.</h1>
@@ -87,10 +126,6 @@
                          for your money without knowing how to build a plan around it.</p>
                     
                         <div class="service-cards">
-                            <div class="service-card">
-                                <img class="coin-front" src="images/coin-retirement.svg"></img>
-                                <img class="coin-back" src="images/coin-retirement2.svg"></img>
-                            </div>
                             <div class="service-card">
                                 <img class="coin-front" src="images/guidance.svg"></img>
                                 <img class="coin-back" src="images/guidance2.svg"></img>
@@ -100,17 +135,22 @@
                                 <img class="coin-back" src="images/protect2.svg"></img>
                             </div>
                             <div class="service-card">
+                                <img class="coin-front" src="images/corporate.svg"></img>
+                                <img class="coin-back" src="images/corporate2.svg"></img>
+                            </div>
+                            <div class="service-card">
                                 <img class="coin-front" src="images/child.svg"></img>
                                 <img class="coin-back" src="images/child2.svg"></img>
+                            </div>
+                            <div class="service-card">
+                                <img class="coin-front" src="images/coin-retirement.svg"></img>
+                                <img class="coin-back" src="images/coin-retirement2.svg"></img>
                             </div>
                             <div class="service-card">
                                 <img class="coin-front" src="images/home.svg"></img>
                                 <img class="coin-back" src="images/home2.svg"></img>
                             </div>
-                            <div class="service-card">
-                                <img class="coin-front" src="images/corporate.svg"></img>
-                                <img class="coin-back" src="images/corporate2.svg"></img>
-                            </div>
+
                         </div>
                 </div>
             </section>

@@ -26,7 +26,38 @@ body{
     margin:0;
     background: linear-gradient(#000000,#001d44d7);
 }
-
+.branding{
+    margin-top:12vw;
+    h1{
+        font-family: var(--primary-font--);
+        font-size: 7vw;
+        margin: auto 0;
+        justify-content: center;
+        animation: fadeup 2s;
+    }
+    h2{
+        font-size: 4vw;
+        animation: fadeup 2s;
+        margin:0;
+    }
+    position: absolute;
+    display:flex;
+    
+}
+.heading{
+    justify-content: center;
+    align-items: center;
+    margin: auto 10vw;
+}
+.logo{
+    position: relative;
+    top:3vw;
+    left:4vw;
+    height: 20vw;
+    width: 20vw;
+    margin:1vw;
+    animation: fadeup 2s;
+}
 .main-background-image{
     margin:0;
     padding:0;
@@ -75,13 +106,7 @@ p{
     justify-content: center;
     text-align: center;
 }
-.logo{
-    position: absolute;
-    top:5vw;
-    left:5vw;
-    height: 30vw;
-    animation: fadeup 2s;
-}
+
 
 .hero-message{
     padding:1vw;
@@ -182,10 +207,40 @@ section{
     width: 20%;
     border-radius:9vw;
 }
-
+/* PROCESS SECTION */
+.process-section{
+    margin:5vw;
+    text-align: left;
+    animation: fadeup 2s;
+}
+.process-grid{
+    h1{
+        margin: 0;
+    }
+    p{
+        justify-content: right;
+    }
+    justify-content: right;
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 0.9fr));
+}
+.process-card{
+    align-items: center;
+    text-align: center;
+    margin:1vw;
+}
+.step{
+    display: block;
+    margin: 0 auto;
+    width: 5vw;
+}
+.arrow{
+    height: 8vw;
+    margin:auto;
+}
 /* SERVICES SECTION */
 .service-cards{
-    margin: 5vw auto;
+    margin: 2vw auto;
     padding:0;
     justify-content: center;
     display: grid;
@@ -219,6 +274,7 @@ section{
         backface-visibility: hidden;
         height:100%;
         z-index: 1;
+        animation: glow 2s;
     }
 
     .coin-back{
@@ -252,9 +308,9 @@ section{
   text-align: center;
   border-radius:5vw;
   color: var(--primary-color--);
-  background-color: var(--primary-color--);
+  background-color: #071624e9;
   z-index: 2;
-  animation: slide-up 4s;
+  animation: fadeup 4s;
 
   h1{
     font-family: var(--primary-font--);
@@ -282,6 +338,9 @@ section{
         background-color: var(--tertiary-color--);
     }
   }
+}
+.close-button{
+    margin-left:90%;
 }
 
 
@@ -368,6 +427,25 @@ section{
   .divider{
     width:100%;
   }
+  .branding{
+    h1{
+        font-size: 10vw;
+        margin-top: 4vw;
+   
+    }
+    h2{
+        font-size: 5vw;
+        margin:0;
+    }
+    position: absolute;
+    display:flex;
+    
+}
+.heading{
+    justify-content: center;
+    align-items: center;
+    margin: auto 6vw;
+}
 
   /* TEXT & HEADINGS */
     h1{
@@ -422,6 +500,36 @@ section{
         padding: 0;
         margin:0;
     }
+    .process-section{
+    margin:5vw;
+    text-align: left;
+    animation: fadeup 2s;
+    }
+    .process-grid{
+        h1{
+            margin: 0;
+        }
+        p{
+            justify-content: right;
+        }
+        justify-content: right;
+        display:grid;
+        grid-template-columns: repeat(auto-fill, minmax(60%, 0.9fr));
+    }
+    .process-card{
+        align-items: center;
+        text-align: center;
+        margin:1vw;
+    }
+    .step{
+        display: block;
+        margin: 0 auto;
+        width: 15vw;
+    }
+    .arrow{
+        height: 8vw;
+        margin:auto;
+    }
     /* CONTACT SECTION */
     .popup-contact-form{
         margin:1100% 8.9%;
@@ -450,7 +558,7 @@ section{
   
   to {
     text-shadow: 0 0 20px var(--primary-color--), 0 0 30px var(--primary-color--) 0 0 40px var(--primary-color--) 0 0 50px var(--primary-color--) 0 0 60px var(--primary-color--) 0 0 70px var(--primary-color--) 0 0 80px var(--primary-color--);
-    filter: drop-shadow(0 0 5rem var(--primary-color--));
+    filter: drop-shadow(0 0 20rem var(--primary-color--));
   }
 }
 
