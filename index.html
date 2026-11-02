@@ -29,7 +29,15 @@
     </head>
 
     <!-- GOOGLE ANALYTICS -->
-    <script async src="{Your Google Analytics Tag}"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSK3P26JNR"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-CSK3P26JNR');
+    </script> 
+
     <body>
         <div class="popup-contact-form" id="popup">
             <button class="close-button" onclick="remove();">X</button>
