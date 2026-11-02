@@ -532,18 +532,20 @@ section{
     }
     /* CONTACT SECTION */
     .popup-contact-form{
-        margin:1370% 8.9%;
+        margin:1350% 8.9%;
         width: 80vw;
-        height: 80vw;
+        height: 100vw;
     h1{
-        font-size: 5vw;
+        font-size: 8vw;
+        margin: 0;
     }
 
     textarea,input{
-        width:40vw
+        width:60vw;
+        height:10vw;
     }
     button{
-        font-size:3vw;
+        font-size:5vw;
     }
     }
 }
