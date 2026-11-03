@@ -239,6 +239,17 @@ section{
     margin:auto;
 }
 /* SERVICES SECTION */
+.services-section{
+    display: flex;
+    text-align: center;
+    margin:5vw;
+}
+
+.services-text{
+    text-align: left;
+    padding-right:2vw;
+    animation: fadeup 2s;
+}
 .service-cards{
     margin: 2vw auto;
     padding:0;
@@ -302,7 +313,7 @@ section{
   visibility: hidden;
   position: absolute;
   justify-content: center;
-  margin:418% 25%;
+  margin:400% 25%;
   width: 50vw;
   height: 35vw;
   text-align: center;
@@ -514,7 +525,7 @@ section{
         }
         justify-content: right;
         display:grid;
-        grid-template-columns: repeat(auto-fill, minmax(60%, 0.9fr));
+        grid-template-columns: repeat(auto-fill, minmax(60%, 1fr));
     }
     .process-card{
         align-items: center;
@@ -530,23 +541,26 @@ section{
         height: 8vw;
         margin:auto;
     }
+ 
     /* CONTACT SECTION */
     .popup-contact-form{
         margin:1350% 8.9%;
         width: 80vw;
         height: 100vw;
-    h1{
-        font-size: 8vw;
-        margin: 0;
-    }
+        .form-headings{
+            margin:10vw;
+            font-size: 8vw;
+            margin: 0;
+        }
 
-    textarea,input{
-        width:60vw;
-        height:10vw;
-    }
-    button{
-        font-size:5vw;
-    }
+        textarea,input{
+            width:60vw;
+            height:10vw;
+            margin: 2vw;
+        }
+        button{
+            font-size:5vw;
+        }
     }
 }
 /*----------------------------------------------------------------------------------------------------------------*/
