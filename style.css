@@ -313,9 +313,9 @@ section{
   visibility: hidden;
   position: absolute;
   justify-content: center;
-  margin:400% 25%;
+  margin:390% 25%;
   width: 50vw;
-  height: 35vw;
+  height: 40vw;
   text-align: center;
   border-radius:5vw;
   color: var(--primary-color--);
@@ -345,6 +345,7 @@ section{
     background-color: var(--primary-color--);
     border-radius:5vw;
     margin-top:2vw;
+    margin-bottom:1vw;
     &:hover{
         color: var(--primary-font-color--);
         background-color: var(--tertiary-color--);
@@ -547,7 +548,7 @@ section{
     .popup-contact-form{
         margin:1300% 8.9%;
         width: 80vw;
-        height: 120vw;
+        height: 128vw;
         .form-headings{
             margin:10vw;
             font-size: 8vw;
@@ -560,6 +561,7 @@ section{
             margin: 2vw;
         }
         button{
+            margin-bottom:4vw;
             font-size:5vw;
         }
     }
