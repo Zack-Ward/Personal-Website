@@ -17,14 +17,17 @@
   --primary-font--: "Poiret One", sans-serif;
   --secondary-font--:"Fira Sans", sans-serif;
 }
-html{
-    scroll-behavior: smooth;
-}
 
-body{
+/* RESOURCE: https://stackoverflow.com/questions/2869212/css3-gradient-background-set-on-body-doesnt-stretch-but-instead-repeats */
+body,html{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#000000,#001d44d7);
+    background-attachment: fixed;
     padding:0;
     margin:0;
-    background: linear-gradient(#000000,#001d44d7);
+    scroll-behavior: smooth;
+    
 }
 .branding{
     margin-top:12vw;
@@ -43,6 +46,10 @@ body{
     position: absolute;
     display:flex;
     
+}
+a{
+    text-decoration: none;
+    color: #48a3e4;
 }
 .heading{
     justify-content: center;
@@ -188,6 +195,10 @@ section{
 }
 
 .text{
+    a{
+        text-decoration: none;
+        color: #48a3e4;
+    }
     text-align: left;
     animation: fadeup 2s;
 }
@@ -356,6 +367,16 @@ section{
     margin-left:90%;
 }
 
+footer{
+    margin:2vw auto;
+    justify-content: center;
+    width:100%;
+    border-top-left-radius: 2vw;
+    border-top-right-radius: 2vw;
+    text-align: center;
+    position:relative;
+    background-color: #0000006a;
+}
 
 /*----------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------   SCREEN SIZES  ---------------------------------------------------*/
