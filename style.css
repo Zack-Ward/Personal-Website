@@ -369,6 +369,7 @@ section{
 
 footer{
     margin:2vw auto;
+    padding:1vw 0;
     justify-content: center;
     width:100%;
     border-top-left-radius: 2vw;
