@@ -65,6 +65,7 @@ a{
     width: 20vw;
     margin:1vw;
     animation: fadeup 2s;
+    z-index: 0;
 }
 .main-background-image{
     margin:0;
@@ -73,6 +74,7 @@ a{
     height: 100%;
     z-index:-1;
 }
+
 .divider{
     width:100%;
 }
@@ -101,6 +103,7 @@ p{
     color: var(--primary-font-color--);
     font-size: 6vw;
     animation: fadeup 5s;
+    animation-trigger: view();
 }
 
 /*----------------------------------------------------------------------------------------------------------------*/
@@ -115,6 +118,24 @@ p{
     text-align: center;
 }
 
+.hero-content-box{
+    position: absolute;
+    margin:80% 2% 0% 50%;
+}
+
+/* RESOURCES: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations */
+.hero-message-box{
+    font-family: var(--primary-font--);
+    color: var(--primary-font-color--);
+    z-index: 0;
+    padding:1vw;
+    background-color: var(--primary-color--);
+    animation: fadeup 5s forwards;
+    timeline-trigger-name: --t;
+    timeline-trigger-source: view();
+    animation-trigger: --t play-once;
+
+}
 
 .hero-message{
     padding:1vw;
@@ -126,7 +147,10 @@ p{
     display: block;
     z-index: 0;
     margin:125% 2% 0% 57%;
-    animation: fadeup 5s;
+    animation: fadeup 5s forwards;
+    timeline-trigger-name: --t;
+    timeline-trigger-source: view();
+    animation-trigger: --t play-once;
 }
 
 .cta-button{
@@ -168,19 +192,6 @@ p{
     }
 }
 
-.hero-content-box{
-    position: absolute;
-    margin:80% 2% 0% 50%;
-}
-
-.hero-message-box{
-    font-family: var(--primary-font--);
-    color: var(--primary-font-color--);
-    animation: fadeup 5s;
-    z-index: 0;
-    padding:1vw;
-    background-color: var(--primary-color--);
-}
 
 /* ABOUT SECTION */
 section{
@@ -192,7 +203,10 @@ section{
 .about-text{
     text-align: left;
     padding-right:2vw;
-    animation: fadeup 2s;
+    animation: fadeup 5s forwards;
+    timeline-trigger-name: --t;
+    timeline-trigger-source: view();
+    animation-trigger: --t play-once;
 }
 
 .text{
@@ -201,7 +215,10 @@ section{
         color: #48a3e4;
     }
     text-align: left;
-    animation: fadeup 2s;
+    animation: fadeup 5s forwards;
+    timeline-trigger-name: --t;
+    timeline-trigger-source: view();
+    animation-trigger: --t play-once;
 }
 
 .profile-photo{
@@ -209,7 +226,10 @@ section{
     height:fit-content;
     width: 30vw;
     filter: drop-shadow(0 0 0.75rem var(--primary-color--));
-    animation: fadeup 2s;
+    animation: fadeup 5s forwards;
+    timeline-trigger-name: --t;
+    timeline-trigger-source: view();
+    animation-trigger: --t play-once;
 }
 
 .image-left{
@@ -223,7 +243,10 @@ section{
 .process-section{
     margin:5vw;
     text-align: left;
-    animation: fadeup 2s;
+    animation: fadeup 5s forwards;
+    timeline-trigger-name: --t;
+    timeline-trigger-source: view();
+    animation-trigger: --t play-once;
 }
 .process-grid{
     h1{
@@ -260,7 +283,10 @@ section{
 .services-text{
     text-align: left;
     padding-right:2vw;
-    animation: fadeup 2s;
+    animation: fadeup 5s forwards;
+    timeline-trigger-name: --t;
+    timeline-trigger-source: view();
+    animation-trigger: --t play-once;
 }
 .service-cards{
     margin: 2vw auto;
@@ -313,10 +339,13 @@ section{
 .cta-text{
     text-align: center;
     padding-right:2vw;
-    animation: fadeup 2s;
     background-color: var(--primary-color-transparent--);
     border-radius: 5vw;
     padding: 4vw;
+    animation: fadeup 5s forwards;
+    timeline-trigger-name: --t;
+    timeline-trigger-source: view();
+    animation-trigger: --t play-once;
     
 }
 
@@ -870,6 +899,8 @@ footer{
 /*----------------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------   ANIMATIONS / TRANSITIONS  ----------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------*/
+
+/* RESOURCES: https://www.youtube.com/watch?v=UmzFk68Bwdk */
 @keyframes glow {
   from {
     text-shadow: 0 0 10px var(--tertiary-color--), 0 0 20px var(--tertiary-color--), 0 0 30px var(--tertiary-color--), 0 0 40px var(--tertiary-color--), 0 0 50px var(--tertiary-color--), 0 0 3vw var(--tertiary-color--), 0 0 4vw var(--tertiary-color--);
