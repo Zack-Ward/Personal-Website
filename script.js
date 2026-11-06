@@ -59,37 +59,6 @@ form.addEventListener('submit', async (e) => {
     return scripts[scripts.length - 1];
   }
 
-  function takeOverIframe() {
-    // Some site editors, notably WIX, embed our JS inside an iframe with no other content.
-    // In this case, to provide a good UI, we'll take over the parent frame.
-    // However, we also want to allow merchants to embed us inside the content of an iframe if they want to.
-    // The code below tries to detect the WIX style situation.
-    var scriptTag = getScriptTag();
-    var parentTags = { HEAD: 1, HTML: 1}
-    return !scriptTag.parentNode || parentTags[scriptTag.parentNode.tagName]
-  }
-
-  function embedIframe() {
-    var scriptTag = getScriptTag();
-
-    var iframe = document.createElement('iframe');
-    var isSquareOnline = ((document.querySelector('meta[name="generator"]') || {}).content || '').includes('Square Online');
-
-      var width = "100%";
-      var height = "100%";
-      iframe.style.minHeight = isSquareOnline ? "auto" : "500px";
-
-    iframe.style.width = width;
-    iframe.style.height = height;
-    iframe.style.border = 'none';
-    iframe.src = 'https://app.squareup.com/appointments/buyer/widget/8s9frsb6zgdurt/L0Z0Q3N47YZYD';
-
-    // allow Apple Pay & Google Pay to work from within iframe
-    iframe.allow = 'payment app.squareup.com';
-
-    scriptTag.parentNode.insertBefore(iframe, scriptTag);
-  }
-
   function embedBookingButton() {
     var scriptTag = getScriptTag();
 
@@ -99,7 +68,7 @@ form.addEventListener('submit', async (e) => {
     button.setAttribute("style", "background-color: #006aff; color: white; height: 40px; line-height: 38px; " +
             "padding: 0 28px; border-radius: 3px; font-weight: 500; font-size: 14px; cursor: pointer; " +
             "display: inline-block; text-decoration: none");
-    button.setAttribute("href", 'https://app.squareup.com/appointments/book/8s9frsb6zgdurt/L0Z0Q3N47YZYD/start');
+    button.setAttribute("href", 'https://book.squareup.com/appointments/8s9frsb6zgdurt/location/L0Z0Q3N47YZYD/availability');
     button.textContent = 'Book Appointment Now';
 
     container.setAttribute("style", "text-align: center");
@@ -120,7 +89,7 @@ form.addEventListener('submit', async (e) => {
   }
 
   if (takeOverIframe()) {
-    window.location = 'https://app.squareup.com/appointments/buyer/widget/8s9frsb6zgdurt/L0Z0Q3N47YZYD';
+    window.location = 'https://book.squareup.com/appointments/8s9frsb6zgdurt/location/L0Z0Q3N47YZYD/availability';
   } else {
     if (scriptParentWidth() < 280) {
       embedBookingButton();
